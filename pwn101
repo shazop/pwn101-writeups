@@ -1,3 +1,0 @@
-Just enter a long string like 
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-Which causes a buffer overflow attack and you will into the shell
