@@ -12,3 +12,11 @@ This is the pseudo-code of the main function
 ## Psudo-Code Analysis
 
 Where we can see the if condition has 2 equal conditions `0xc0ff33` and `0xc0d3` if they are satisfied we will into the /bin/sh which is the shell.
+
+But there is only one scanf function for accepting input from the user plus the LSB(Little endian) and 32-bit executeable which means we need to write a custom script for the challenge to pwn it.
+
+## Solution:
+Lets do a quick math finding the padding for the input 
+
+<img width="206" height="58" alt="image" src="https://github.com/user-attachments/assets/b1268c3a-5d22-463f-9ad2-10928f2bfea5" />
+
